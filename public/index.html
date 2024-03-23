@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Website</title>
+  <style>
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav {
+      display: inline-block;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    main {
+      padding: 20px;
+    }
+    .destination {
+      margin-bottom: 20px;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    /* Hide other sections initially */
+    section {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Travel Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('home-section')">Home</a></li>
+        <li><a href="#" onclick="showSection('destinations-section')">Destinations</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home-section">
+      <h2>Welcome to Our Travel Website</h2>
+      <p>Discover your next adventure with us!</p>
+    </section>
+
+    <section id="destinations-section">
+      <h2>Featured Destinations</h2>
+      <div>
+        <h3>Destination 1</h3>
+        <p>Description of Destination 1.</p>
+        <p><a href="#">Learn More</a></p>
+      </div>
+      <div>
+        <h3>Destination 2</h3>
+        <p>Description of Destination 2.</p>
+        <p><a href="#">Learn More</a></p>
+      </div>
+      <div>
+        <h3>Destination 3</h3>
+        <p>Description of Destination 3.</p>
+        <p><a href="#">Learn More</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Travel Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      var sections = document.querySelectorAll('section');
+      sections.forEach(function(section) {
+        section.style.display = 'none';
+      });
+      
+      // Show the selected section
+      var selectedSection = document.getElementById(sectionId);
+      selectedSection.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
