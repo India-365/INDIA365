@@ -1,67 +1,100 @@
-/* Reset default browser styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styles */
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-}
-
-/* Header styles */
-header {
-    background-color: #060607;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin-bottom: 10px;
-}
-
-/* Navigation styles */
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: #fff;
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-position: center; 
+  }
+  
+  a {
     text-decoration: none;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Main content styles */
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
-/* Footer styles */
-footer {
-    background-color: #060607;
-    color: #910505;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
     width: 100%;
-}
+    justify-content: space-between;
+    padding: 20px; /* Add padding to the top and bottom of the navbar */
+    color: whitesmoke;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    margin-left: auto;
+  }
+  
+  
+  .nav-links li {
+    margin: 0 60px; /* Add spacing between the list items */
+  }
+  
+  .nav-links li a {
+    font-size: 20px; /* Increase the font size of the navigation items */
+    color:crimson
+  }
+  .nav-links li a:hover {
+    color: crimson; /* Change color on hover */
+    text-decoration: underline;
+  }
+  
+  .nav-links li a.active {
+    font-weight: bold; /* Make active link bold */
+    color: crimson; /* Change color of active link */
+  }
+  header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./img/light.jpg'); /* Added semicolon */
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .header-content {
+    margin-bottom: 150px;
+    color:black;
+    text-align: center;
+  }
+  
+  .header-content h2 {
+    font-size: 5vmin;
+  }
+  
+  .line {
+    width: 150px;
+    height: 4px;
+    background: crimson;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+  
+  .header-content h1 {
+    font-size: 8vmin;
+    margin-top: 50px;
+    margin-bottom: 30px; 
+  }
+  
+  
+  .ctn,
+  .nav-links li:nth-child(5) a {
+    padding: 8px 15px;
+    background: crimson;
+    border-radius: 30px;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  
+  .ctn:hover,
+  .nav-links li:nth-child(5) a:hover {
+    background: pink;
+  }
