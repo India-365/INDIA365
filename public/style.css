@@ -52,7 +52,11 @@ nav{
 }
 
 nav .logo{
+<<<<<<< HEAD
     width: 100px;
+=======
+    width: 150px;
+>>>>>>> 27455dcac147007acc6435f9edc08c3f0b791f17
     margin: 2vh;
     margin-left: 8%;
 }
