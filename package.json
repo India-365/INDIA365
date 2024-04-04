@@ -1,12 +1,18 @@
 {
-    "name": "india365",
-    "version": "1.0.0",
-    "scripts": {
-        "start": "node app.js"
-    },
-    "dependencies": {
-        "express": "^4.19.1",
-        "open": "^10.1.0",
-        "opn": "^6.0.0"
-    }
+  "name": "india365",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.1",
+    "open": "^10.1.0",
+    "opn": "^6.0.0"
+  },
+  "description": "",
+  "main": "app.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
