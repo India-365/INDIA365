@@ -6,7 +6,9 @@ const path = require('path');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Start the server
-const port = process.env.PORT || 5050;
+ HEAD:public/app.js
+const port = process.env.PORT || 3000;
+ d73568ba1bfbaee3ac7116064965898759af0f48:app.js
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
