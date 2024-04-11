@@ -16,7 +16,7 @@
     }
     .container {
       max-width: 800px;
-      margin: 50px auto;
+      margin: 100px auto 50px;
       padding: 20px;
       background-color: rgba(0, 0, 0, 0.7);
       border-radius: 10px;
@@ -29,9 +29,101 @@
       font-size: 18px;
       line-height: 1.6;
     }
+    nav{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right:0;
+  background-color: rgba(0, 0, 0, 15%);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 15%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; 
+}
+
+nav .logo{
+  width: 100px;
+  margin: 2vh;
+  margin-left: 8%;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.navbar{
+  display: flex;
+  
+}
+
+.navbar a{
+  color: white;
+  font-size: 18px;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-weight: 500;   
+  text-decoration: none;
+  transition: ease 0.40s;
+}
+
+.navbar a:hover,.navbar a.active{
+  background: white;
+  color: black;
+  box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+  border-radius: 5px;
+  
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+}
+
+
+
+.button{
+  display: inline-block;
+  margin-top:5vh;
+  font-size: 25px;
+  padding: 10px 30px;
+  color: rgb(21, 74, 74);
+  /* background-color:rgb(164, 44, 44); */
+  background-color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: ease 0.30s;
+}
+
+.button:hover{
+  transform: scale(1.1);
+  color: white;
+  background-color: rgb(21, 74, 74);
+  /* border: 2px solid rgb(42, 37, 68); */
+  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4);
+  padding: 10px 30px;
+}
+
   </style>
 </head>
 <body>
+  <nav>
+    <img src="./img/newlogo2.jpg" class="logo" alt="Logo" title="FirstFlight Travels">
+    
+    <ul class="navbar">
+        <li>
+
+            <a href="./home.html">Home</a>
+            <a href="./india.html">India</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+        </li>
+    </ul>
+</nav>
+
   <div class="container">
     <h1><span style="color:peachpuff;">Welcome to India</span></h1>
     <p><span style="font-style: italic;">India, officially the Republic of India, is a country in South Asia. It is the seventh-largest country by land area, the second-most populous country, and the most populous democracy in the world.</p>
