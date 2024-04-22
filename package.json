@@ -5,13 +5,14 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.19.1",
+    "express": "^4.19.2",
+    "init": "^0.1.2",
+    "mongodb": "^6.5.0",
     "open": "^10.1.0",
     "opn": "^6.0.0"
   },
   "description": "",
   "main": "app.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"

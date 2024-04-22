@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('./img/jaipur.jpg'); /* Replace 'india_background.jpg' with your background image file */
+    background-size: cover;
+    background-position: fill;
+    color: white;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 100px auto 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 15%);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 15%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  nav .logo {
+    width: 100px;
+    margin: 2vh;
+    margin-left: 8%;
+  }
+  
+  .navbar {
+    display: flex;
+  }
+  
+  .navbar a {
+    color: white;
+    font-size: 18px;
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: ease 0.40s;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    background: white;
+    color: black;
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 5px;
+  }
+  
+  .button {
+    display: inline-block;
+    margin-top: 5vh;
+    font-size: 25px;
+    padding: 10px 30px;
+    color: rgb(21, 74, 74);
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: ease 0.30s;
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: rgb(21, 74, 74);
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 10px 30px;
+  }
+  
+  .highlight {
+    color: peachpuff;
+  }
+  
+  .italic {
+    font-style: italic;
+  }
+  
