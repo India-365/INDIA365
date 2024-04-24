@@ -278,7 +278,7 @@ body{
 }
 
 .title {
-    font-size:
+    font: size 1px;
 }    
 .products-container {
     display: flex; /* Arrange products in a row */
@@ -359,6 +359,57 @@ nav ul li a{
     font-size: 17px;
 }
 
+
+
+
+.budget-estimator {
+   max-width: 800px;
+   margin: 0 auto;
+   padding: 20px;
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+   margin-bottom: 20px;
+}
+
+.input-group label {
+   display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
+}
+
+.input-group input {
+   width: 100%;
+   padding: 10px;
+   border-radius: 4px;
+   border: 1px solid #ccc;
+   box-sizing: border-box;
+}
+
+#calculate-total {
+   display: block;
+   width: 100%;
+   padding: 10px;
+   background-color: #27ae60;
+   color: #fff;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+#calculate-total:hover {
+   background-color: #219653;
+}
+
+#total-cost {
+   font-size: 18px;
+   font-weight: bold;
+   margin-top: 20px;
+}
 
 
 
