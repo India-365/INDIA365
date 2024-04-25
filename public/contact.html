@@ -37,6 +37,11 @@
                 <input type="text" name="subject" placeholder="What brings you here?" required>
                 <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
                 <input type="submit" value="Submit" class="submit-btn">
+                <form id="contactForm">
+                    <div id="thankYouMessage" style="display: none;">
+                        Thank you for contacting us! We will get back to you within 2 business days.
+                    </div>
+                    
             </form>
         </div>
     </section>
@@ -61,5 +66,58 @@
             </div>
         </section>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the form element
+            const form = document.getElementById("contactForm");
+    
+            // Add event listener for form submission
+            form.addEventListener("submit", function(event) {
+                // Prevent the default form submission
+                event.preventDefault();
+    
+                // Get form data
+                const formData = new FormData(form);
+    
+                // Create an object to hold form data
+                const formDataObj = {};
+                formData.forEach((value, key) => {
+                    formDataObj[key] = value;
+                });
+    
+                // Call a function to send the form data (you need a server-side script for this)
+                sendFormData(formDataObj);
+    
+                // Display the thank you message
+                const thankYouMessage = document.getElementById("thankYouMessage");
+                form.style.display = "none";
+                thankYouMessage.style.display = "block";
+            });
+    
+            // Function to send form data to the server
+            function sendFormData(formData) {
+                // Here you would typically use AJAX to send the form data to a server-side script
+                // The server-side script would handle sending emails
+                // Example:
+                
+                fetch("http://127.0.0.1:5500/public/contact.html", {
+                    method: "POST",
+                    body: JSON.stringify(formData),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+                
+            }
+        });
+    </script>
+    
 </body>
 </html>
