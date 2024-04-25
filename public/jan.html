@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Festivals</title>
+    <link rel="stylesheet" href="jan.css">
+    
+    font-size: 28px;
+}
+
+p {
+    font-size: 16px;
+    </style>
+</head>
+<body>
+    <div class="content" id="home"> 
+        <nav>
+            <img src="./img/newlogo2.jpg" class="logo" alt="Logo" title="FirstFlight Travels">
+            
+            <ul class="navbar">
+                <li>
+                    <a href="./home.html">Home</a>
+                    <a href="./india.html">India</a>
+                    <a href="./about.html">About Us</a>
+                    <a href="./contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="event-info">
+            <h2>Event Title</h2>
+            <img src="img/jaipur.jpg" alt="Event Image">
+            <h1>Makar Sankranti / Pongal Information</h1>
+
+    <p><strong>Date:</strong> January 14th or 15th</p>
+
+    <p>
+        <strong>Description:</strong> Makar Sankranti is a popular Hindu festival celebrated in January
+        to mark the transition of the Sun into the zodiac sign of Capricorn. It is a harvest festival,
+        expressing gratitude for the winter crop. In South India, it's known as Pongal, with rituals like
+        cooking a special dish called Pongal made from newly harvested rice and milk. The festival is also
+        known for kite flying in some regions.
+    </p>
+
+    <p>
+        Makar Sankranti is a joyous occasion that brings communities together to celebrate nature, harvest,
+        and the changing seasons.
+    </p>
+
+            
+        
+                    
+            </body>
+            </html></p>
+            <div class="services">
+                <section class="container">
+                    <div class="text">
+                        <h2>We have the best services available for you!</h2>
+                    </div>
+                    <div class="rowitems">
+                        <div class="container-box" onclick="showPopup('Flight Services', 'Hospitals...')">
+                            <div class="container-image">
+                                <img src="./img/2a.jpg" alt="Flight Services">
+                            </div>
+                            <h4>Amenities</h4>
+                            <p>Hospitals...</p>
+                        </div>
+                        <div class="container-box" onclick="showPopup('Food Services', 'Foodspots')">
+                            <div class="container-image">
+                                <img src="./img/4a.jpg" alt="Food Services">
+                            </div>
+                            <h4>Food Services</h4>
+                            <p>Foodspots</p>
+                        </div>
+                        <div class="container-box" onclick="showPopup('Travel Services', 'Bus,Train,Flight')">
+                            <div class="container-image">
+                                <img src="./img/3a.jpg" alt="Travel Services">
+                            </div>
+                            <h4>Travel Services</h4>
+                            <p>Bus,Train,Flight</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="popup" id="popup">
+            <h3 id="popupTitle"></h3>
+            <p id="popupContent"></p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+        <div class="weaather updates">
+            <!-- Embed your existing weather update HTML code here -->
+        </div>
+    </div>
+
+    <script src="jan.js"></script> <!-- Include the script.js file here -->
+</body>
+</html>
