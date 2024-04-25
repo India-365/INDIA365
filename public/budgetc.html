@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Budget Estimator</title>
+    <link rel="stylesheet" href="budgetc.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Travel Budget Estimator</h1>
+        <div class="services">
+            <label>
+                Hotel Cost:
+                <input type="number" id="hotelCost" min="0" value="0">
+            </label>
+            <label>
+                Food Cost:
+                <input type="number" id="foodCost" min="0" value="0">
+            </label>
+            <label>
+                Transport Cost:
+                <input type="number" id="transportCost" min="0" value="0">
+            </label>
+            <button onclick="calculateTotal()">Calculate Total</button>
+            <p id="totalCost">Total Cost: Rs 0</p>
+        </div>
+    </div>
+
+    <script src="budgetc.js"></script>
+</body>
+</html>
