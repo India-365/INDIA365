@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events and Festivals</title>
     <link rel="stylesheet" href="july.css">
+    
     <style>
         /* Add CSS for the popup */
         .popup {
@@ -68,10 +69,11 @@
                             <h4>Amenities</h4>
                             <p>Hospitals...</p>
                         </div>
-                        <div class="container-box" onclick="showPopup('Food Services', 'Foodspots')">
+                        <div class="container-box" onclick="showPopup('Food Services', 'Hotel')">
                             <div class="container-image">
                                 <img src="./img/4a.jpg" alt="Food Services">
                             </div>
+                            
                             <h4>Food Services</h4>
                             <p>Foodspots</p>
                         </div>
@@ -82,6 +84,14 @@
                             <h4>Travel Services</h4>
                             <p>Bus,Train,Flight</p>
                         </div>
+                
+                        <div class="container-box" onclick="showPopup('Travel Services', 'Bus,Train,Flight')">
+                            <div class="container-image">
+                            <img src="./img/weather.jpeg" alt="Travel Services">
+                            </div>
+                        <h4>Weather</h4>
+                        <p>Click here</p>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -91,11 +101,37 @@
             <p id="popupContent"></p>
             <button onclick="closePopup()">Close</button>
         </div>
-        <div class="weaather updates">
-            <!-- Embed your existing weather update HTML code here -->
+        
+            
+        
+        <div class="section">
+            <center>
+            <h2>Budget Estimator</h2>
+            </center>
+            <div class="budget-estimator">
+                <div class="input-group">
+                    <label for="hotel-cost">Hotel Cost:</label>
+                    <input type="number" id="hotel-cost" placeholder="Enter hotel cost">
+                </div>
+                <div class="input-group">
+                    <label for="food-cost">Food Cost:</label>
+                    <input type="number" id="food-cost" placeholder="Enter food cost">
+                </div>
+                <div class="input-group">
+                    <label for="travel-cost">Travel Cost:</label>
+                    <input type="number" id="travel-cost" placeholder="Enter travel cost">
+                </div>
+                <button id="calculate-total">Calculate Total Cost</button>
+                <p id="total-cost"></p>
+            </div>
         </div>
+        
     </div>
 
     <script src="july.js"></script> <!-- Include the script.js file here -->
+    <script src="pop.js" defer></script>
+    
+</body>
+
 </body>
 </html>
