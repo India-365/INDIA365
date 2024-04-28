@@ -13,16 +13,23 @@ body {
     margin-top: 20px;
 }
 .weather-widget {
-    background-image: url('./img/cloud.jpg');
+   /* background-image: url('./img/cloud.jpg');*/
     background-size: cover; /* Cover the container */
     background-position: center; /* Center the background image */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
     text-align: center;
     position: fixed;
+<<<<<<< HEAD
     top: 250px; /* Adjust top spacing */
     right: 200px; /* Adjust right spacing */
+=======
+    bottom: 20px;
+   /* top: 200px; /* Adjust top spacing */
+    right: 50px; /* Adjust right spacing */
+>>>>>>> 5e0c874812efcbc5ae2fcbc215220989305e9706
     z-index: 100; /* Set a higher z-index to ensure it's above other content */
     /* Example of checking the weather-widgetbackground-color: r styling */
     position: relative; /* Adjust positioning if needed */
