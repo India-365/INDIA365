@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 150%;
     margin: 0;
 }
 
@@ -21,8 +21,18 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: fixed;
-    top: 200px; /* Adjust top spacing */
-    right: 50px; /* Adjust right spacing */
+    top: 250px; /* Adjust top spacing */
+    right: 200px; /* Adjust right spacing */
     z-index: 100; /* Set a higher z-index to ensure it's above other content */
+    /* Example of checking the weather-widgetbackground-color: r styling */
+    position: relative; /* Adjust positioning if needed */
+    /* Add more styles as needed */
+    height:200px;
+    width:200px;
+    right: -1000px;
 }
+
+/* Example of resetting margins and paddings */
+
+
 
