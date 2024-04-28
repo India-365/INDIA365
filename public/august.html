@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Festivals</title>
+    <link rel="stylesheet" href="july.css">
+    <style>
+        /* Add CSS for the popup */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="content" id="home"> 
+        <nav>
+            <img src="./img/newlogo2.jpg" class="logo" alt="Logo" title="FirstFlight Travels">
+            
+            <ul class="navbar">
+                <li>
+                    <a href="./home.html">Home</a>
+                    <a href="./india1.html">India</a>
+                    <a href="./about.html">About Us</a>
+                    <a href="./contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="event-info">
+            <img src="img/karsha-gustor.jpg" alt="Event Image">
+
+            <h2><b></b>Karsha Gustor Festival: A Unique Buddhist Festival</b></h2>
+            <p>
+                
+                The largest and the most important monastery in Zanskar, the Karsha Monastery celebrates this 
+                festival annually to recognize the victory of good over evil. 
+                From a Black Hat Dance performance to a Masked Dance performance by the monks,
+                this festivity is full of uniqueness. Apart from the joyful music and dance, 
+                one also gets to witness the vibrant colours of the region during Karsha Gustor. 
+                Needless to say, this is one of the Indian festivals in July which are so worth attending! 
+                Visiting this destination during this festival is one of the best things to do in Ladakh.
+            </p> 
+            <p>Festival Highlights: Black hat dance performance
+
+            </p>
+            <p>
+                When: 15th to 16st July 2023</p>
+                <p>Where: Zanskar, Ladakh</p>
+                
+            <div class="services">
+                <section class="container">
+                    <div class="text">
+                        <h2>We have the best services available for you!</h2>
+                    </div>
+                    <div class="rowitems">
+                        <div class="container-box" onclick="showPopup('Flight Services', 'Hospitals...')">
+                            <div class="container-image">
+                                <img src="./img/2a.jpg" alt="Flight Services">
+                            </div>
+                            <h4>Amenities</h4>
+                            <p>Hospitals...</p>
+                        </div>
+                        <div class="container-box" onclick="showPopup('Food Services', 'Foodspots')">
+                            <div class="container-image">
+                                <img src="./img/4a.jpg" alt="Food Services">
+                            </div>
+                            <h4>Food Services</h4>
+                            <p>Foodspots</p>
+                        </div>
+                        <div class="container-box" onclick="showPopup('Travel Services', 'Bus,Train,Flight')">
+                            <div class="container-image">
+                                <img src="./img/3a.jpg" alt="Travel Services">
+                            </div>
+                            <h4>Travel Services</h4>
+                            <p>Bus,Train,Flight</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="popup" id="popup">
+            <h3 id="popupTitle"></h3>
+            <p id="popupContent"></p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+        <div class="weaather updates">
+            <!-- Embed your existing weather update HTML code here -->
+        </div>
+    </div>
+
+    <script src="july.js"></script> <!-- Include the script.js file here -->
+</body>
+</html>

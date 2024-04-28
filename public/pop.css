@@ -83,10 +83,11 @@ body{
 }
 
 .container .products-container .product h3{
-   padding:.5rem 0;
-   font-size: 2rem;
+   padding:1.5rem ;
+   font-size: 1rem;
    color:#444;
 }
+
 
 .container .products-container .product:hover h3{
    color:#27ae60;
@@ -114,6 +115,10 @@ body{
    margin: 1rem;
     width: 300px; /* Adjust width as needed */
     height: 400px;
+    height: auto; /* Allow height to adjust based on content */
+   max-height: 80vh; /* Limit maximum height to 80% of viewport height */
+   overflow-y: auto;
+   
 }
 
 .products-preview .preview.active{
@@ -140,8 +145,10 @@ body{
 .products-preview .preview h3{
    color:#444;
    padding:.5rem 0;
-   font-size: 2.5rem;
+   font-size: 3.5;
 }
+
+
 
 .products-preview .preview .stars{
    padding:1rem 0;
@@ -159,7 +166,7 @@ body{
 .products-preview .preview p{
    line-height: 1.5;
    padding:1rem 0;
-   font-size: 1.6rem;
+   font-size: 1rem;
    color:#777;
 }
 

@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     margin: 0;
 }
 
@@ -13,15 +13,18 @@ body {
     margin-top: 20px;
 }
 .weather-widget {
-    background-image: url('./img/cloud.jpg');
+   /* background-image: url('./img/cloud.jpg');*/
     background-size: cover; /* Cover the container */
     background-position: center; /* Center the background image */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
     text-align: center;
     position: fixed;
-    top: 50px; /* Adjust top spacing */
+    bottom: 20px;
+   /* top: 200px; /* Adjust top spacing */
     right: 50px; /* Adjust right spacing */
+    z-index: 100; /* Set a higher z-index to ensure it's above other content */
 }
 
