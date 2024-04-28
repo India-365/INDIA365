@@ -363,7 +363,7 @@ nav ul li a{
 
 
 .budget-estimator {
-   max-width: 800px;
+   max-width: 600px;
    margin: 0 auto;
    padding: 20px;
    background-color: #fff;
@@ -377,7 +377,7 @@ nav ul li a{
 
 .input-group label {
    display: block;
-   margin-bottom: 5px;
+   margin-bottom: 10px;
    font-weight: bold;
 }
 
