@@ -21,6 +21,49 @@
     </style>
 </head>
 <body>
+    <div class="weather-widget">
+        <h2>Panaji</h2>
+        <div class="weather-info">
+            <p>Loading...</p>
+        </div>
+    </div>
+    <script src="weatherfeb.js"></script>
+    <style>
+       .weather-widget {
+    width: 250px; /* Set the width of the weather widget */
+    height: 200px; /* Set the height of the weather widget */
+    padding: 20px; /* Reduce padding for a more compact layout */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-image: url('./img/cloud.jpg');
+    background-size: cover; /* Cover the container */
+    background-position: center; /* Center the background image */
+    text-align: center;
+    position: relative;
+    color: black; /* Text color against the background */
+}
+
+.weather-widget h2 {
+    margin-bottom: 10px;
+    font-size: 25px; /* Reduce font size for header */
+}
+
+.weather-info {
+    margin-top: 10px;
+    font-size: 18px; /* Reduce font size for weather info */
+}
+
+/* Positioning for the weather widget */
+.weather-widget {
+    position: absolute;
+    top: 50%; /* Align vertically centered */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    right: 20px; /* Adjust the right spacing */
+}
+
+
+    </style>
+        
     <div class="content" id="home"> 
         <nav>
             <img src="./img/newlogo2.jpg" class="logo" alt="Logo" title="FirstFlight Travels">
