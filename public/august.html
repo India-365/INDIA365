@@ -4,27 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events and Festivals</title>
-    <link rel="stylesheet" href="july.css">
-    <style>
-        /* Add CSS for the popup */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 20px;
-            border: 1px solid #ccc;
-            z-index: 9999;
-        }
-    </style>
+    <link rel="stylesheet" href="pop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="pop.js" defer></script>
 </head>
 <body>
+    <div class="weather-widget">
+        <h2>Panaji</h2>
+        <div class="weather-info">
+            <p>Loading...</p>
+        </div>
+    </div>
+    <script src="weatherfeb.js"></script>
+    <style>
+       .weather-widget {
+    width: 250px; /* Set the width of the weather widget */
+    height: 200px; /* Set the height of the weather widget */
+    padding: 20px; /* Reduce padding for a more compact layout */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-image: url('./img/cloud.jpg');
+    background-size: cover; /* Cover the container */
+    background-position: center; /* Center the background image */
+    text-align: center;
+    position: relative;
+    color: black; /* Text color against the background */
+}
+
+.weather-widget h2 {
+    margin-bottom: 10px;
+    font-size: 25px; /* Reduce font size for header */
+}
+
+.weather-info {
+    margin-top: 10px;
+    font-size: 18px; /* Reduce font size for weather info */
+}
+
+/* Positioning for the weather widget */
+.weather-widget {
+    position: absolute;
+    top: 50%; /* Align vertically centered */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+    right: 20px; /* Adjust the right spacing */
+}
+
+
+    </style>
+        
     <div class="content" id="home"> 
         <nav>
             <img src="./img/newlogo2.jpg" class="logo" alt="Logo" title="FirstFlight Travels">
-            
             <ul class="navbar">
                 <li>
                     <a href="./home.html">Home</a>
@@ -34,68 +64,142 @@
                 </li>
             </ul>
         </nav>
-        <div class="event-info">
-            <img src="img/karsha-gustor.jpg" alt="Event Image">
+        <div class="section">
+            
+            <div class="event-info">
+                <img src="img/krishnajanjpg.jpg" alt="Event Image">
+                <h1> Krishna Janmashtami
+                </h1>
+                <br>
+                <p>
+                    <strong>Description:</strong>Gokul Ashtami or Janmashtami celebrates the birth of Lord Krishna.
+                     Devotees fast till midnight on the eve of the birth of Lord Krishna.
+                      Krishna-janma is celebrated at midnight at temples and in homes amidst bhajans (devotional songs),
+                       marking the birth of Lord Krishna.
+                    The next day is celebrated as Gokulashtami.
+                     Devotees remember how the Lord was very fond of butter and used to go to great lengths to obtain butter. 
+                     In honour of the beloved Lord, a ritual performed on this day is the dahi-handi.
+                      Clay pots filled with curd, puffed rice and milk are strung high up above the streets.</p> 
+                      Groups of enthusiastic youngsters form human pyramids to reach up to these and break them open
+                      the way Lord Krishna and his friends would, after sneaking into the houses of gopis to steal butter </p>
 
-            <h2><b></b>Karsha Gustor Festival: A Unique Buddhist Festival</b></h2>
-            <p>
-                
-                The largest and the most important monastery in Zanskar, the Karsha Monastery celebrates this 
-                festival annually to recognize the victory of good over evil. 
-                From a Black Hat Dance performance to a Masked Dance performance by the monks,
-                this festivity is full of uniqueness. Apart from the joyful music and dance, 
-                one also gets to witness the vibrant colours of the region during Karsha Gustor. 
-                Needless to say, this is one of the Indian festivals in July which are so worth attending! 
-                Visiting this destination during this festival is one of the best things to do in Ladakh.
-            </p> 
-            <p>Festival Highlights: Black hat dance performance
-
-            </p>
-            <p>
-                When: 15th to 16st July 2023</p>
-                <p>Where: Zanskar, Ladakh</p>
-                
-            <div class="services">
-                <section class="container">
-                    <div class="text">
-                        <h2>We have the best services available for you!</h2>
-                    </div>
-                    <div class="rowitems">
-                        <div class="container-box" onclick="showPopup('Flight Services', 'Hospitals...')">
-                            <div class="container-image">
-                                <img src="./img/2a.jpg" alt="Flight Services">
-                            </div>
-                            <h4>Amenities</h4>
-                            <p>Hospitals...</p>
-                        </div>
-                        <div class="container-box" onclick="showPopup('Food Services', 'Foodspots')">
-                            <div class="container-image">
-                                <img src="./img/4a.jpg" alt="Food Services">
-                            </div>
-                            <h4>Food Services</h4>
-                            <p>Foodspots</p>
-                        </div>
-                        <div class="container-box" onclick="showPopup('Travel Services', 'Bus,Train,Flight')">
-                            <div class="container-image">
-                                <img src="./img/3a.jpg" alt="Travel Services">
-                            </div>
-                            <h4>Travel Services</h4>
-                            <p>Bus,Train,Flight</p>
-                        </div>
-                    </div>
-                </section>
+                </p>
+                <br>
+                <p><strong>Date:August 26,2024-Monday
+                </strong> </p>
+                <p><strong>Where: Mathura, Uttar Pradesh</strong></p>
+                 <p><strong>Festival Highlights: Human pyramids</strong></p>   
+                 Dressing up as Krishna or Radha
+                </p>
             </div>
         </div>
-        <div class="popup" id="popup">
-            <h3 id="popupTitle"></h3>
-            <p id="popupContent"></p>
-            <button onclick="closePopup()">Close</button>
-        </div>
-        <div class="weaather updates">
-            <!-- Embed your existing weather update HTML code here -->
+    
+        <script src="weather1.js"></script>
+        <div class="section">
+            <h2></h2>
+            <div class="container">
+                <h3 class="title">We have the best services available for you!</h3>
+                <div class="products-container">
+                    <div class="product" data-name="p-1">
+                        <img src="img/4a.jpg" alt="">
+                        <h3>Amenities</h3>
+                        
+                    </div>
+                    <div class="product" data-name="p-2">
+                        <img src="img/2a.jpg" alt="">
+                        <h3>Food Spots</h3>
+                        
+                    </div>
+                    <div class="product" data-name="p-3">
+                        <img src="img/3a.jpg" alt="">
+                        <h3>Transports</h3>
+                        
+                    </div>
+                    <div class="product" data-name="p-4">
+                        <img src="img/weather.jpeg" alt="">
+                        <h3>weather</h3>
+                        
+                    </div>
+                </div>
+                <div class="products-preview">
+                    <div class="preview" data-target="p-1">
+                        <i class="fas fa-times"></i>
+                        <img src="img/4a.jpg" alt="">
+                        <h3>Hotels</h3>
+                        
+                        <h1><span class="highlight">Availabilities (per night)</span></h1>
+                            Hotel Babylon Regency,opposite Krishna Janmabhoomi Temple(INR 3000)</p>
+                            Hotel Regal Luxe International( INR 2268 )</p>
+                         Hotel Superhouse by Wisdom Madhav( INR 1620)</p>
+
+            
+                        
+                    </div>
+                    <div class="preview" data-target="p-2">
+                        <i class="fas fa-times"></i>
+                        <img src="img/2a.jpg" alt="">
+                        <h3><strong>Foodspots</strong></h3>
+                        Flowers Rooftop Cafe (8.9km from Vrindavan)</p>
+
+                                                                                                                                                                
+                        MVT Restaurant (9.1km from Vrindavan)
+                        
+                        </p>
+                        Dasaprakash (8.7km from Vrindavan)
+                        </p>
+                
+                        
+                    </div>
+                    <div class="preview" data-target="p-3">
+                        <i class="fas fa-times"></i>
+                        <img src="img/3a.jpg" alt="">
+                        <h3>Modes</h3>
+                        
+                          By Air:
+                          Closest Airport is Agra Airport,Kheria 6km East of the city</p>
+
+                          By Railway:
+                          Mathura Railway Station.</p>
+
+                          By Road:
+                          Delhi-Faridabad -Jawar - Tapal- Vrindavan-Mathura
+                         
+
+                        
+                    </div>
+                    <div class="preview" data-target="p-4">
+                        <i class="fas fa-times"></i>
+                        <img src="img/weather.jpeg" alt="">
+                        <h3>weather</h3>
+                        <li><a href="./weather.html">Click Here</a></li>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="july.js"></script> <!-- Include the script.js file here -->
+    
+    <div class="section">
+        <h2>Budget Estimator</h2>
+        <div class="budget-estimator">
+            <div class="input-group">
+                <label for="hotel-cost">Hotel Cost:</label>
+                <input type="number" id="hotel-cost" placeholder="Enter hotel cost">
+            </div>
+            <div class="input-group">
+                <label for="food-cost">Food Cost:</label>
+                <input type="number" id="food-cost" placeholder="Enter food cost">
+            </div>
+            <div class="input-group">
+                <label for="travel-cost">Travel Cost:</label>
+                <input type="number" id="travel-cost" placeholder="Enter travel cost">
+            </div>
+            <button id="calculate-total">Calculate Total Cost</button>
+            <p id="total-cost"></p>
+        </div>
+    </div>
+    
+
 </body>
 </html>
