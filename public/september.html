@@ -60,6 +60,8 @@
                     <a href="./india1.html">India</a>
                     <a href="./about.html">About Us</a>
                     <a href="./contact.html">Contact Us</a>
+                    <a href="./explore.html">Explore</a>
+
                 </li>
             </ul>
         </nav>
@@ -127,9 +129,9 @@
                         <h3>Hotels</h3>
                         
                         <h1><span class="highlight">Availabilities (per night)</span></h1>
-                            Hotel Kumkum(INR 1971)</p>
-                        City Guest House( INR 2454 )</p>
-                         Hyatt Centric Juhu Mumbai( INR 9786)</p>
+                        <a href="https://www.booking.com/Share-W9Wysqy">  Hotel Ariana Residency(INR 4971)</p>
+                            <a href="https://www.booking.com/Share-ZMYWPv">Hotel BKC Annex( INR 2454 )</p>
+                                <a href="https://www.booking.com/Share-l6xqH2">Hotel New Blue Sapphire Residency( INR 9786)</p>
 
             
                         
@@ -188,24 +190,54 @@
     
     <div class="section">
         <h2>Budget Estimator</h2>
-        <div class="budget-estimator">
-            <div class="input-group">
-                <label for="hotel-cost">Hotel Cost:</label>
-                <input type="number" id="hotel-cost" placeholder="Enter hotel cost">
-            </div>
-            <div class="input-group">
-                <label for="food-cost">Food Cost:</label>
-                <input type="number" id="food-cost" placeholder="Enter food cost">
-            </div>
-            <div class="input-group">
-                <label for="travel-cost">Travel Cost:</label>
-                <input type="number" id="travel-cost" placeholder="Enter travel cost">
-            </div>
-            <button id="calculate-total">Calculate Total Cost</button>
-            <p id="total-cost"></p>
+    <div class="budget-estimator">
+        <div class="input-group">
+            <label for="hotel-cost">Hotel Cost:</label>
+            <select id="hotel-cost">
+                <option value="2454">Budget Hotel (INR 2454)</option>
+                <option value="4971">Standard Hotel (INR 4971)</option>
+                <option value="9786">Luxury Hotel (INR 9786)</option>
+            </select>
         </div>
+        <div class="input-group">
+            <label for="food-cost">Food Cost:</label>
+            <select id="food-cost">
+                <option value="200">Budgeted Food (INR 200)</option>
+                <option value="800">Normal Food (INR 800)</option>
+                <option value="2000">Luxury Food (INR 2000)</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="travel-cost">Travel Cost:</label>
+            <select id="travel-cost">
+                <option value="100">Railway (INR 540)</option>
+                <option value="200">Road (INR 1500)</option>
+                <option value="300">Flight (INR 2300)</option>
+            </select>
+        </div>
+        <button id="calculate-total">Calculate Total Cost</button>
+        <p id="total-cost"></p>
     </div>
-    
+
+    <script>
+        // Function to calculate the total cost
+        function calculateTotalCost() {
+            // Retrieve selected values from the dropdowns
+            const hotelCost = parseFloat(document.getElementById('hotel-cost').value) || 0;
+            const foodCost = parseFloat(document.getElementById('food-cost').value) || 0;
+            const travelCost = parseFloat(document.getElementById('travel-cost').value) || 0;
+
+            // Calculate the total cost
+            const totalCost = hotelCost + foodCost + travelCost;
+
+            // Display the total cost with proper formatting
+            document.getElementById('total-cost').textContent = `Total Cost: INR ${totalCost.toFixed(2)}`;
+        }
+
+        // Add event listener to the calculate button
+        document.getElementById('calculate-total').addEventListener('click', calculateTotalCost);
+    </script>
+
 
 </body>
 </html>
