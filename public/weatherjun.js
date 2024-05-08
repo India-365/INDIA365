@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const apiKey = '1f8a2504ac88c02555f76e8378dd8f58'; // Replace with your OpenWeatherMap API key
-    const city = 'mathura'; // Replace with desired city
+    const city = 'jammu and kashmir'; // Replace with desired city
 
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
