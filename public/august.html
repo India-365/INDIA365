@@ -62,7 +62,6 @@
                     <a href="./about.html">About Us</a>
                     <a href="./contact.html">Contact Us</a>
                     <a href="./explore.html">Explore</a>
-
                 </li>
             </ul>
         </nav>
@@ -129,9 +128,9 @@
                         <h3>Hotels</h3>
                         
                         <h1><span class="highlight">Availabilities (per night)</span></h1>
-                        <a href="https://www.booking.com/Share-OJ2pUb">Shri Girraj Residency(INR 3000)</a></p>
-                            <a href=" https://www.booking.com/Share-zRDD5j">Hotel City Star Family Stay( INR 2268 )</a></p>
-                           <a href=" https://www.booking.com/Share-rAFHX3"> Hotel Superhouse by Wisdom Madhav( INR 1620)</a></p>
+                            Hotel Babylon Regency,opposite Krishna Janmabhoomi Temple(INR 3000)</p>
+                            Hotel Regal Luxe International( INR 2268 )</p>
+                         Hotel Superhouse by Wisdom Madhav( INR 1620)</p>
 
             
                         
@@ -183,23 +182,54 @@
     
     <div class="section">
         <h2>Budget Estimator</h2>
-        <div class="budget-estimator">
-            <div class="input-group">
-                <label for="hotel-cost">Hotel Cost:</label>
-                <input type="number" id="hotel-cost" placeholder="Enter hotel cost">
-            </div>
-            <div class="input-group">
-                <label for="food-cost">Food Cost:</label>
-                <input type="number" id="food-cost" placeholder="Enter food cost">
-            </div>
-            <div class="input-group">
-                <label for="travel-cost">Travel Cost:</label>
-                <input type="number" id="travel-cost" placeholder="Enter travel cost">
-            </div>
-            <button id="calculate-total">Calculate Total Cost</button>
-            <p id="total-cost"></p>
+    <div class="budget-estimator">
+        <div class="input-group">
+            <label for="hotel-cost">Hotel Cost:</label>
+            <select id="hotel-cost">
+                <option value="1620">Budget Hotel (INR 1620)</option>
+                <option value="2268">Standard Hotel (INR 2268)</option>
+                <option value="3000">Luxury Hotel (INR 3000)</option>
+            </select>
         </div>
+        <div class="input-group">
+            <label for="food-cost">Food Cost:</label>
+            <select id="food-cost">
+                <option value="200">Budgeted Food (INR 200)</option>
+                <option value="800">Normal Food (INR 800)</option>
+                <option value="2000">Luxury Food (INR 2000)</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="travel-cost">Travel Cost:</label>
+            <select id="travel-cost">
+                <option value="100">Railway (INR 450)</option>
+                <option value="200">Road (INR 1200)</option>
+                <option value="300">Flight (INR 2540)</option>
+            </select>
+        </div>
+        <button id="calculate-total">Calculate Total Cost</button>
+        <p id="total-cost"></p>
     </div>
+
+    <script>
+        // Function to calculate the total cost
+        function calculateTotalCost() {
+            // Retrieve selected values from the dropdowns
+            const hotelCost = parseFloat(document.getElementById('hotel-cost').value) || 0;
+            const foodCost = parseFloat(document.getElementById('food-cost').value) || 0;
+            const travelCost = parseFloat(document.getElementById('travel-cost').value) || 0;
+
+            // Calculate the total cost
+            const totalCost = hotelCost + foodCost + travelCost;
+
+            // Display the total cost with proper formatting
+            document.getElementById('total-cost').textContent = `Total Cost: INR ${totalCost.toFixed(2)}`;
+        }
+
+        // Add event listener to the calculate button
+        document.getElementById('calculate-total').addEventListener('click', calculateTotalCost);
+    </script>
+
     
 
 </body>

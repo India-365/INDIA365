@@ -61,7 +61,6 @@
                     <a href="./about.html">About Us</a>
                     <a href="./contact.html">Contact Us</a>
                     <a href="./explore.html">Explore</a>
-
                 </li>
             </ul>
         </nav>
@@ -73,7 +72,7 @@
                 </h1>
                 <br>
                 <p>
-                    <strong>Description:</strong>Every year, nearly half a million visitors descend on the tiny desert town of Pushkar in rural Rajasthan to attend the annual Pushkar Camel Fair. 
+                    <strong>Description:</strong>Every year, nearly hagit lf a million visitors descend on the tiny desert town of Pushkar in rural Rajasthan to attend the annual Pushkar Camel Fair. 
                     This five-day festival held during the full moon of the Hindu month of Kartik, which usually falls in October.
                      Festivities include moustache-length competitions and camel races, and there’s even a camel beauty pageant!
                       However, the main purpose of the festival is trade, and it’s the place to go if you want to buy or sell a camel.</p>
@@ -181,20 +180,50 @@
         <div class="budget-estimator">
             <div class="input-group">
                 <label for="hotel-cost">Hotel Cost:</label>
-                <input type="number" id="hotel-cost" placeholder="Enter hotel cost">
+                <select id="hotel-cost">
+                    <option value="5539"> Amar Bagh Resort(INR 5539)</option>
+                    <option value="4180"> Rawai Luxury Tents Pushkar(INR 4180)</option>
+                    <option value="6950">Atithi Camp & Resort(INR 6950)</option>
+                </select>
             </div>
             <div class="input-group">
                 <label for="food-cost">Food Cost:</label>
-                <input type="number" id="food-cost" placeholder="Enter food cost">
+                <select id="food-cost">
+                    <option value="200">Budgeted Food (INR 200)</option>
+                    <option value="800">Normal Food (INR 800)</option>
+                    <option value="2000">Luxury Food (INR 2000)</option>
+                </select>
             </div>
             <div class="input-group">
                 <label for="travel-cost">Travel Cost:</label>
-                <input type="number" id="travel-cost" placeholder="Enter travel cost">
+                <select id="travel-cost">
+                    <option value="8090">Railway (INR 8090)</option>
+                    <option value="10240">Road (INR 10240)</option>
+                    <option value="18549">Flight (INR 18549)</option>
+                </select>
             </div>
             <button id="calculate-total">Calculate Total Cost</button>
             <p id="total-cost"></p>
         </div>
-    </div>
+    
+        <script>
+            // Function to calculate the total cost
+            function calculateTotalCost() {
+                // Retrieve selected values from the dropdowns
+                const hotelCost = parseFloat(document.getElementById('hotel-cost').value) || 0;
+                const foodCost = parseFloat(document.getElementById('food-cost').value) || 0;
+                const travelCost = parseFloat(document.getElementById('travel-cost').value) || 0;
+    
+                // Calculate the total cost
+                const totalCost = hotelCost + foodCost + travelCost;
+    
+                // Display the total cost with proper formatting
+                document.getElementById('total-cost').textContent = `Total Cost: INR ${totalCost.toFixed(2)}`;
+            }
+    
+            // Add event listener to the calculate button
+            document.getElementById('calculate-total').addEventListener('click', calculateTotalCost);
+        </script>
     
 
 </body>
