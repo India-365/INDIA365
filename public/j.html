@@ -121,22 +121,13 @@
                         
                         <h1><span class="highlight">Availabilities (per night)</span></h1>
                         Vijay Homestay( INR 6,600 )</p>
-<<<<<<< HEAD
+
                         <a href="https://www.booking.com/hotel/in/vijay-homestay-dhordo.html">vijay homestay.com</a></p>
                          Rann Visamo Resort( INR 4,700 )</p>
                          <a href="http://rannvisamo.in/">Rann Visamo.com</a></p>
                          Shaam E Sarhad Resort( INR 4,200)</p>
                          <a href="https://www.hodka.in/">Shamm-e-Sarhad.com</a></p>
-=======
-                        <a href="https://www.booking.com/hotel/in/vijay-homestay-dhordo.html">Vijay homestay.com</a></p>
-
-                         Rann Visamo Resort( INR 4,700 )</p>
-                         <a href="http://rannvisamo.in/">Rann visamo.com</a></p>
-
-                         Shaam E Sarhad Resort( INR 4,200)</p>
-                         <a href="https://www.hodka.in/">Shaam-e-sarhad.com</a></p>
-
->>>>>>> 984075cce65b3857e7c72b5592852423120d9849
+                        
                             
 
             
@@ -185,24 +176,53 @@
     
     <div class="section">
         <h2>Budget Estimator</h2>
-        <div class="budget-estimator">
-            <div class="input-group">
-                <label for="hotel-cost">Hotel Cost:</label>
-                <input type="number" id="hotel-cost" placeholder="Enter hotel cost">
-            </div>
-            <div class="input-group">
-                <label for="food-cost">Food Cost:</label>
-                <input type="number" id="food-cost" placeholder="Enter food cost">
-            </div>
-            <div class="input-group">
-                <label for="travel-cost">Travel Cost:</label>
-                <input type="number" id="travel-cost" placeholder="Enter travel cost">
-            </div>
-            <button id="calculate-total">Calculate Total Cost</button>
-            <p id="total-cost"></p>
+    <div class="budget-estimator">
+        <div class="input-group">
+            <label for="hotel-cost">Hotel Cost:</label>
+            <select id="hotel-cost">
+                <option value="6600">Vijay Homestay (INR 6,600)</option>
+                <option value="4700">Rann Visamo Resort (INR 4,700)</option>
+                <option value="4200">Shaam E Sarhad Resort (INR 4,200)</option>
+            </select>
         </div>
+        <div class="input-group">
+            <label for="food-cost">Food Cost:</label>
+            <select id="food-cost">
+                <option value="200">Budgeted Food (INR 200)</option>
+                <option value="800">Normal Food (INR 800)</option>
+                <option value="2000">Luxury Food (INR 2000)</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="travel-cost">Travel Cost:</label>
+            <select id="travel-cost">
+                <option value="3400">Railway (INR 3,400)</option>
+                <option value="25551">Road (INR 25,551)</option>
+                <option value="21104">Flight (INR 21,104)</option>
+            </select>
+        </div>
+        <button id="calculate-total">Calculate Total Cost</button>
+        <p id="total-cost"></p>
     </div>
-    
+
+    <script>
+        // Function to calculate the total cost
+        function calculateTotalCost() {
+            // Retrieve selected values from the dropdowns
+            const hotelCost = parseFloat(document.getElementById('hotel-cost').value) || 0;
+            const foodCost = parseFloat(document.getElementById('food-cost').value) || 0;
+            const travelCost = parseFloat(document.getElementById('travel-cost').value) || 0;
+
+            // Calculate the total cost
+            const totalCost = hotelCost + foodCost + travelCost;
+
+            // Display the total cost with proper formatting
+            document.getElementById('total-cost').textContent = `Total Cost: INR ${totalCost.toFixed(2)}`;
+        }
+
+        // Add event listener to the calculate button
+        document.getElementById('calculate-total').addEventListener('click', calculateTotalCost);
+    </script>
 
 </body>
 </html>

@@ -195,20 +195,50 @@ Renting a Scooter/Car: Renting a scooter or car is a popular choice for explorin
         <div class="budget-estimator">
             <div class="input-group">
                 <label for="hotel-cost">Hotel Cost:</label>
-                <input type="number" id="hotel-cost" placeholder="Enter hotel cost">
+                <select id="hotel-cost">
+                    <option value="2223">The Pam Air Hotel (INR 2,223)</option>
+                    <option value="3046">Indie Stays Goa (INR 3,046)</option>
+                    <option value="1593">Grand Royale Palms (INR 1593)</option>
+                </select>
             </div>
             <div class="input-group">
                 <label for="food-cost">Food Cost:</label>
-                <input type="number" id="food-cost" placeholder="Enter food cost">
+                <select id="food-cost">
+                    <option value="200">Budgeted Food (INR 200)</option>
+                    <option value="800">Normal Food (INR 800)</option>
+                    <option value="2000">Luxury Food (INR 2000)</option>
+                </select>
             </div>
             <div class="input-group">
                 <label for="travel-cost">Travel Cost:</label>
-                <input type="number" id="travel-cost" placeholder="Enter travel cost">
+                <select id="travel-cost">
+                    <option value="755">Railway (INR 755)</option>
+                    <option value="10000">Road (INR 10,000)</option>
+                    <option value="3000">Flight (INR 3,000)</option>
+                </select>
             </div>
             <button id="calculate-total">Calculate Total Cost</button>
             <p id="total-cost"></p>
         </div>
-    </div>
+    
+        <script>
+            // Function to calculate the total cost
+            function calculateTotalCost() {
+                // Retrieve selected values from the dropdowns
+                const hotelCost = parseFloat(document.getElementById('hotel-cost').value) || 0;
+                const foodCost = parseFloat(document.getElementById('food-cost').value) || 0;
+                const travelCost = parseFloat(document.getElementById('travel-cost').value) || 0;
+    
+                // Calculate the total cost
+                const totalCost = hotelCost + foodCost + travelCost;
+    
+                // Display the total cost with proper formatting
+                document.getElementById('total-cost').textContent = `Total Cost: INR ${totalCost.toFixed(2)}`;
+            }
+    
+            // Add event listener to the calculate button
+            document.getElementById('calculate-total').addEventListener('click', calculateTotalCost);
+        </script>
     
 
 </body>
