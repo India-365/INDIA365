@@ -178,48 +178,30 @@
 
     
     <div class="section">
-        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Estimator</title>
-</head>
-<body>
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Estimator</title>
-</head>
-<body>
-
-    <h2>Budget Estimator</h2>
+        <h2>Budget Estimator</h2>
     <div class="budget-estimator">
         <div class="input-group">
             <label for="hotel-cost">Hotel Cost:</label>
             <select id="hotel-cost">
-                <option value="100">Budget Hotel ($100)</option>
-                <option value="200">Standard Hotel ($200)</option>
-                <option value="300">Luxury Hotel ($300)</option>
+                <option value="100">Budget Hotel (INR 100)</option>
+                <option value="200">Standard Hotel (INR 200)</option>
+                <option value="300">Luxury Hotel (INR 300)</option>
             </select>
         </div>
         <div class="input-group">
             <label for="food-cost">Food Cost:</label>
             <select id="food-cost">
-                <option value="100">Budgeted Food ($100)</option>
-                <option value="200">Normal Food ($200)</option>
-                <option value="300">Luxury Food ($300)</option>
+                <option value="200">Budgeted Food (INR 200)</option>
+                <option value="800">Normal Food (INR 800)</option>
+                <option value="2000">Luxury Food (INR 2000)</option>
             </select>
         </div>
         <div class="input-group">
             <label for="travel-cost">Travel Cost:</label>
             <select id="travel-cost">
-                <option value="100">Railway ($100)</option>
-                <option value="200">Road ($200)</option>
-                <option value="300">Flight ($300)</option>
+                <option value="100">Railway (INR 100)</option>
+                <option value="200">Road (INR 200)</option>
+                <option value="300">Flight (INR 300)</option>
             </select>
         </div>
         <button id="calculate-total">Calculate Total Cost</button>
@@ -229,13 +211,16 @@
     <script>
         // Function to calculate the total cost
         function calculateTotalCost() {
+            // Retrieve selected values from the dropdowns
             const hotelCost = parseFloat(document.getElementById('hotel-cost').value) || 0;
             const foodCost = parseFloat(document.getElementById('food-cost').value) || 0;
             const travelCost = parseFloat(document.getElementById('travel-cost').value) || 0;
 
+            // Calculate the total cost
             const totalCost = hotelCost + foodCost + travelCost;
 
-            document.getElementById('total-cost').textContent = `Total Cost: $${totalCost.toFixed(2)}`;
+            // Display the total cost with proper formatting
+            document.getElementById('total-cost').textContent = `Total Cost: INR ${totalCost.toFixed(2)}`;
         }
 
         // Add event listener to the calculate button
